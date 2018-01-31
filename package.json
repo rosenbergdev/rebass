@@ -1,7 +1,8 @@
 {
-  "name": "rebass",
-  "version": "1.0.4",
-  "description": "Functional React UI component library, built with styled-components",
+  "name": "@inloop/rebass",
+  "version": "2.0.0",
+  "description":
+    "Functional React UI component library, built with styled-components",
   "main": "dist/index.js",
   "scripts": {
     "prepublish": "babel src -d dist",
@@ -27,7 +28,7 @@
     "palx": "^1.0.2",
     "prop-types": "^15.5.10",
     "recompose": "^0.23.5",
-    "styled-components": "^2.1.2",
+    "styled-components": "3.1.4",
     "styled-system": "^1.0.0-12",
     "tag-hoc": "^1.0.0"
   },
@@ -48,6 +49,9 @@
     "react-x-ray": "^1.0.0-2",
     "refunk": "^1.0.0-2"
   },
+  "peerDependencies": {
+    "styled-components": "3.x"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/jxnblk/rebass.git"
@@ -57,16 +61,10 @@
   },
   "homepage": "https://github.com/jxnblk/rebass",
   "ava": {
-    "require": [
-      "babel-register"
-    ],
+    "require": ["babel-register"],
     "babel": "inherit"
   },
   "nyc": {
-    "exclude": [
-      "test",
-      "docs",
-      "stories"
-    ]
+    "exclude": ["test", "docs", "stories"]
   }
 }

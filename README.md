@@ -1,20 +1,15 @@
 # Rebass
 
-Functional React UI component library, built with [styled-components](https://www.styled-components.com)
-
-[![Build Status](https://travis-ci.org/jxnblk/rebass.svg?branch=master)](https://travis-ci.org/jxnblk/rebass)
-
-http://jxnblk.com/rebass
+## Styled components v3
 
 ```sh
-npm i rebass
+npm i @inloop/rebass
 ```
 
 Rebass is a library of highly-composable, primitive UI components for React,
 built with styled-components to keep styles isolated and reduce the need to write custom CSS in your application.
 Based upon a configurable design system,
 Rebass‘s props API makes building consistent, responsive web apps simpler and faster.
-
 
 ## Getting Started
 
@@ -32,15 +27,14 @@ const App = props => (
 
 ## Features
 
-- Functional stateless UI components
-- Style encapsulation with styled-components
-- No external CSS dependencies
-- Configurable theming
-- Extensible base components
-- Design-system based consistency
-- Built for responsive web design
-- Reduces the need to write custom CSS
-
+* Functional stateless UI components
+* Style encapsulation with styled-components
+* No external CSS dependencies
+* Configurable theming
+* Extensible base components
+* Design-system based consistency
+* Built for responsive web design
+* Reduces the need to write custom CSS
 
 ## Architectural Approach
 
@@ -58,7 +52,6 @@ and can fit into virtually any higher level application architecture.
 
 See [Patterns for Style Composition in React](http://jxnblk.com/writing/posts/patterns-for-style-composition-in-react/)
 for more on some of the thought behind Rebass.
-
 
 ## Base Props
 
@@ -122,22 +115,22 @@ The margin and padding props make referencing steps on the spacing scale
 layout design without the need to add custom margin and padding declarations throughout an application.
 The margin and padding props use a shorthand syntax.
 
-Prop | Meaning
----|---
-`m`  | margin
-`mt` | margin-top
-`mr` | margin-right
-`mb` | margin-bottom
-`ml` | margin-left
-`mx` | margin-left and margin-right
-`my` | margin-top and margin-bottom
-`p`  | padding
-`pt` | padding-top
-`pr` | padding-right
-`pb` | padding-bottom
-`pl` | padding-left
-`px` | padding-left and padding-right
-`py` | padding-top and padding-bottom
+| Prop | Meaning                        |
+| ---- | ------------------------------ |
+| `m`  | margin                         |
+| `mt` | margin-top                     |
+| `mr` | margin-right                   |
+| `mb` | margin-bottom                  |
+| `ml` | margin-left                    |
+| `mx` | margin-left and margin-right   |
+| `my` | margin-top and margin-bottom   |
+| `p`  | padding                        |
+| `pt` | padding-top                    |
+| `pr` | padding-right                  |
+| `pb` | padding-bottom                 |
+| `pl` | padding-left                   |
+| `px` | padding-left and padding-right |
+| `py` | padding-top and padding-bottom |
 
 ```jsx
 // Numbers reference steps on the spacing scale
@@ -184,10 +177,10 @@ Each value after the first corresponds to a media query derived from `theme.brea
 ```jsx
 <Text
   width={[
-    1,    // 100% width at the smallest breakpoint
-    1/2,  // 50% width at the next breakpoint
+    1, // 100% width at the smallest breakpoint
+    1 / 2, // 50% width at the next breakpoint
     null, // null skips a breakpoint
-    1/4   // 25% width at the next
+    1 / 4 // 25% width at the next
   ]}
 />
 ```
@@ -247,7 +240,6 @@ injectGlobal`
 
 For an interactive demo of all Rebass components, see http://jxnblk.com/rebass
 
-
 ## Component-Specific Props
 
 Some components accept other props for styling.
@@ -257,52 +249,51 @@ Some components accept other props for styling.
 The `<Text />` component, which is also the base for `<Heading />`, `<Subhead />`, `<Lead />`, and `<Small />`,
 accepts several typographic style props.
 
-- `left` (boolean) text-align: left
-- `center` (boolean) text-align: center
-- `right` (boolean) text-align: right
-- `justify` (boolean) text-align: justify
-- `bold` (boolean) font-weight: theme.weights[1]
-- `caps` (boolean) text-transform: uppercase; letter-spacing: .2em
+* `left` (boolean) text-align: left
+* `center` (boolean) text-align: center
+* `right` (boolean) text-align: right
+* `justify` (boolean) text-align: justify
+* `bold` (boolean) font-weight: theme.weights[1]
+* `caps` (boolean) text-transform: uppercase; letter-spacing: .2em
 
 ### `<Border />`
 
-- `borderWidth` (number) pixel value for border width
-- `top` (boolean) border-top
-- `right` (boolean) border-right
-- `bottom` (boolean) border-bottom
-- `left` (boolean) border-left
-- `color` (string) sets *only* the border color
+* `borderWidth` (number) pixel value for border width
+* `top` (boolean) border-top
+* `right` (boolean) border-right
+* `bottom` (boolean) border-bottom
+* `left` (boolean) border-left
+* `color` (string) sets _only_ the border color
 
 ### `<Container />`
 
-- `maxWidth` (number) the maximum width of the container element
+* `maxWidth` (number) the maximum width of the container element
 
 ### `<NavLink />`, `<TabItem />`, `<DotButton />`
 
-- `active` (boolean) adjusts style for an active state
+* `active` (boolean) adjusts style for an active state
 
 ### `<Banner />`
 
-- `backgroundImage` (string) URL for a background image
+* `backgroundImage` (string) URL for a background image
 
 ### `<BackgroundImage />`
 
-- `ratio` (number) converted into a percentage to maintain aspect ratio
+* `ratio` (number) converted into a percentage to maintain aspect ratio
 
 ### `<Avatar />`
 
-- `size` (number) pixel width and height
+* `size` (number) pixel width and height
 
 ### `<Fixed />` and `<Absolute />`
 
 Both components accept props to control positioning. The margin and padding props can be used to control distance from the edge of a container.
 
-- `top` (boolean) top: 0
-- `right` (boolean) right: 0
-- `bottom` (boolean) bottom: 0
-- `left` (boolean) left: 0
-- `z` (number) z-index
-
+* `top` (boolean) top: 0
+* `right` (boolean) right: 0
+* `bottom` (boolean) bottom: 0
+* `left` (boolean) left: 0
+* `z` (number) z-index
 
 ## Grid Styled
 
@@ -326,17 +317,13 @@ import { Provider } from 'rebass'
 const theme = {
   breakpoints: [
     // min-width breakpoints in ems
-    40, 52, 64
+    40,
+    52,
+    64
   ],
-  space: [
-    0, 6, 12, 18, 24, 30, 36
-  ],
-  fontSizes: [
-    12, 16, 18, 24, 36, 48, 72
-  ],
-  weights: [
-    400, 600
-  ],
+  space: [0, 6, 12, 18, 24, 30, 36],
+  fontSizes: [12, 16, 18, 24, 36, 48, 72],
+  weights: [400, 600],
   colors: {
     black: '#111',
     white: '#fff',
@@ -363,9 +350,9 @@ import styled from 'styled-components'
 import { Button } from 'rebass'
 
 const CustomButton = styled(Button)`
-  border: 1px solid rgba(0, 0, 0, .25);
-  background-image: linear-gradient(transparent, rgba(0, 0, 0, .125));
-  box-shadow: 0 0 4px rgba(0, 0, 0, .25)
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.125));
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 `
 ```
 
@@ -377,10 +364,9 @@ The styled-components documentation explains how to handle
 
 ### Related
 
-- [styled-system](https://github.com/jxnblk/styled-system)
-- [grid-styled](https://github.com/jxnblk/grid-styled)
-- [palx](https://github.com/jxnblk/palx)
-- [styled-components](https://github.com/styled-components/styled-components)
+* [styled-system](https://github.com/jxnblk/styled-system)
+* [grid-styled](https://github.com/jxnblk/grid-styled)
+* [palx](https://github.com/jxnblk/palx)
+* [styled-components](https://github.com/styled-components/styled-components)
 
 [MIT License](.github/LICENSE.md)
-
