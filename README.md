@@ -6,6 +6,33 @@
 npm i rebass-next
 ```
 
+### TIP
+
+If you're using Babel, use `module-resolver` plugin and add an alias for `rebass-next`.
+
+```js
+"plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "rebass": "rebass-next"
+        },
+        "cwd": "babelrc"
+      }
+    ],
+  ],
+```
+
+and leave all imports as they were
+
+```jsx
+import { Flex, Text, .. } from 'rebass'
+```
+
+## Original repo
+
 Rebass is a library of highly-composable, primitive UI components for React,
 built with styled-components to keep styles isolated and reduce the need to write custom CSS in your application.
 Based upon a configurable design system,
