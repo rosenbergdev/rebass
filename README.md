@@ -3,7 +3,7 @@
 ## Styled components v3
 
 ```sh
-npm i @inloop/rebass
+npm i rebass-next
 ```
 
 Rebass is a library of highly-composable, primitive UI components for React,

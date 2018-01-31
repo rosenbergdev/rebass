@@ -1,6 +1,6 @@
 {
-  "name": "@inloop/rebass",
-  "version": "2.0.0",
+  "name": "rebass-next",
+  "version": "2.0.1",
   "description":
     "Functional React UI component library, built with styled-components",
   "main": "dist/index.js",
