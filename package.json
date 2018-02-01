@@ -1,6 +1,6 @@
 {
   "name": "rebass-next",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description":
     "Functional React UI component library, built with styled-components",
   "main": "dist/index.js",
@@ -28,7 +28,7 @@
     "palx": "^1.0.2",
     "prop-types": "^15.5.10",
     "recompose": "^0.23.5",
-    "styled-components": "3.1.4",
+    "styled-components": "^3.1.4",
     "styled-system": "^1.0.0-12",
     "tag-hoc": "^1.0.0"
   },
@@ -50,7 +50,7 @@
     "refunk": "^1.0.0-2"
   },
   "peerDependencies": {
-    "styled-components": "3.x"
+    "styled-components": "3.x.x"
   },
   "repository": {
     "type": "git",
